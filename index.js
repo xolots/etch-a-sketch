@@ -19,7 +19,7 @@ for (let x = 1; x < 16; x++) {
 
 let containerSubAll = document.querySelectorAll('.container-sub')
 console.log(childCon.length)
-for (let i = 0; i < childConList.length + 1; i++){
+for (let i = 0; i < childConList.length; i++){
     containerSubAll[i].addEventListener('mouseover', (e) => {
         let target = e.target
         if(target.classList.contains('child-con')){
@@ -48,3 +48,8 @@ for (let i = 0; i < childConList.length + 1; i++){
         }
     })
 }
+
+let tombol = document.querySelector('#change-pixel')
+tombol.addEventListener('click', () => {
+    console.log('hai')
+})
