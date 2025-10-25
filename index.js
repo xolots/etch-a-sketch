@@ -23,8 +23,13 @@ function whenHover(jumlah_pixel) {
 
     // tambah event listener ketika di hover akan berubah warna yang sudah ditentuukan pake switch statement
     for (let i = 0; i < parseInt(jumlah_pixel); i++) {
+        let opacity = {
+            i: 0.1
+        }
+
         containerSubAll[i].addEventListener('mouseover', (e) => {
             let target = e.target
+
             if (target.classList.contains('child-con')) {
                 let randomNumber = Math.floor(Math.random() * 5)
                 let warna = "white"
@@ -47,6 +52,7 @@ function whenHover(jumlah_pixel) {
                 }
 
                 target.style.backgroundColor = warna;
+                target.style.opacity = opacity.i += 0.1
             }
         })
     }
